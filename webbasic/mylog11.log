@@ -1,0 +1,187 @@
+2020-03-25 16:52:55.285  INFO 21788 --- [restartedMain] com.hui.webbasic.WebbasicApplication     : Starting WebbasicApplication on LAPTOP-93RGLFOL with PID 21788 (D:\javaCode\springBootDemo\webbasic\target\classes started by miaomiao in D:\javaCode\springBootDemo\webbasic)
+2020-03-25 16:52:55.285  INFO 21788 --- [restartedMain] com.hui.webbasic.WebbasicApplication     : No active profile set, falling back to default profiles: default
+2020-03-25 16:52:55.352  INFO 21788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-25 16:52:55.352  INFO 21788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-25 16:52:56.497  INFO 21788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-25 16:52:56.513  INFO 21788 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-25 16:52:56.513  INFO 21788 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-25 16:52:56.583  INFO 21788 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-25 16:52:56.583 DEBUG 21788 --- [restartedMain] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-03-25 16:52:56.587  INFO 21788 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1225 ms
+2020-03-25 16:52:56.630  INFO 21788 --- [restartedMain] com.hui.webbasic.CustomFilter            : filter 初始化
+2020-03-25 16:52:56.793  INFO 21788 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-25 16:52:56.809 DEBUG 21788 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-03-25 16:52:56.852 DEBUG 21788 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2020-03-25 16:52:56.875 DEBUG 21788 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-03-25 16:52:56.883 DEBUG 21788 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-03-25 16:52:56.922  INFO 21788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-25 16:52:56.970  INFO 21788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-25 16:52:56.970  INFO 21788 --- [restartedMain] com.hui.webbasic.WebbasicApplication     : Started WebbasicApplication in 2.102 seconds (JVM running for 3.248)
+2020-03-25 16:52:56.974  INFO 21788 --- [restartedMain] com.hui.webbasic.WebbasicApplication     : 服务启动
+2020-03-25 16:53:45.581  INFO 21788 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-25 16:53:45.581  INFO 21788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-25 16:53:45.581 DEBUG 21788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-03-25 16:53:45.586 DEBUG 21788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-03-25 16:53:45.587  INFO 21788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-03-25 16:53:45.593  INFO 21788 --- [http-nio-8080-exec-1] com.hui.webbasic.CustomFilter            : doFilter 请求处理
+2020-03-25 16:53:45.594 DEBUG 21788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/hello", parameters={}
+2020-03-25 16:53:45.597 DEBUG 21788 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hui.webbasic.HelloController#hello()
+2020-03-25 16:53:45.628 DEBUG 21788 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-03-25 16:53:45.629 DEBUG 21788 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Hello World"]
+2020-03-25 16:53:45.636 DEBUG 21788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-03-25 16:53:46.113  INFO 21788 --- [http-nio-8080-exec-2] com.hui.webbasic.CustomFilter            : doFilter 请求处理
+2020-03-25 16:53:46.113 DEBUG 21788 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/hello", parameters={}
+2020-03-25 16:53:46.114 DEBUG 21788 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hui.webbasic.HelloController#hello()
+2020-03-25 16:53:46.114 DEBUG 21788 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-03-25 16:53:46.115 DEBUG 21788 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Hello World"]
+2020-03-25 16:53:46.115 DEBUG 21788 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-03-25 16:53:46.619  INFO 21788 --- [http-nio-8080-exec-3] com.hui.webbasic.CustomFilter            : doFilter 请求处理
+2020-03-25 16:53:46.619 DEBUG 21788 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/hello", parameters={}
+2020-03-25 16:53:46.619 DEBUG 21788 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hui.webbasic.HelloController#hello()
+2020-03-25 16:53:46.620 DEBUG 21788 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-03-25 16:53:46.620 DEBUG 21788 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Hello World"]
+2020-03-25 16:53:46.621 DEBUG 21788 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-03-25 16:54:20.856  INFO 21788 --- [http-nio-8080-exec-6] com.hui.webbasic.CustomFilter            : doFilter 请求处理
+2020-03-25 16:54:20.857 DEBUG 21788 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/my-tomcat/logs", parameters={}
+2020-03-25 16:54:20.860 DEBUG 21788 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-03-25 16:54:20.863 DEBUG 21788 --- [http-nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2020-03-25 16:54:20.864 DEBUG 21788 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2020-03-25 16:54:20.867 DEBUG 21788 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2020-03-25 16:54:20.868 DEBUG 21788 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2020-03-25 16:54:20.878 DEBUG 21788 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2020-03-25 16:54:20.883 DEBUG 21788 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2020-03-25 16:54:40.565  INFO 21788 --- [http-nio-8080-exec-7] com.hui.webbasic.CustomFilter            : doFilter 请求处理
+2020-03-25 16:54:40.566 DEBUG 21788 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/my-tomcat/logs/access_log.2020-03-25.log", parameters={}
+2020-03-25 16:54:40.567 DEBUG 21788 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-03-25 16:54:40.568 DEBUG 21788 --- [http-nio-8080-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2020-03-25 16:54:40.569 DEBUG 21788 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2020-03-25 16:54:40.569 DEBUG 21788 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2020-03-25 16:54:40.570 DEBUG 21788 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2020-03-25 16:54:40.576 DEBUG 21788 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2020-03-25 16:54:40.577 DEBUG 21788 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2020-03-25 16:54:56.082  INFO 21788 --- [http-nio-8080-exec-9] com.hui.webbasic.CustomFilter            : doFilter 请求处理
+2020-03-25 16:54:56.082 DEBUG 21788 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/my-tomcat/logs/access_log.2020-03-25.log", parameters={}
+2020-03-25 16:54:56.083 DEBUG 21788 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-03-25 16:54:56.084 DEBUG 21788 --- [http-nio-8080-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2020-03-25 16:54:56.085 DEBUG 21788 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2020-03-25 16:54:56.085 DEBUG 21788 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2020-03-25 16:54:56.086 DEBUG 21788 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2020-03-25 16:54:56.097 DEBUG 21788 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2020-03-25 16:54:56.097 DEBUG 21788 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2020-03-25 16:54:56.274  INFO 21788 --- [http-nio-8080-exec-10] com.hui.webbasic.CustomFilter            : doFilter 请求处理
+2020-03-25 16:54:56.275 DEBUG 21788 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/my-tomcat/logs/access_log.2020-03-25.log", parameters={}
+2020-03-25 16:54:56.276 DEBUG 21788 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-03-25 16:54:56.277 DEBUG 21788 --- [http-nio-8080-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2020-03-25 16:54:56.277 DEBUG 21788 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2020-03-25 16:54:56.277 DEBUG 21788 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2020-03-25 16:54:56.278 DEBUG 21788 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2020-03-25 16:54:56.283 DEBUG 21788 --- [http-nio-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2020-03-25 16:54:56.283 DEBUG 21788 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2020-03-25 16:54:56.481  INFO 21788 --- [http-nio-8080-exec-1] com.hui.webbasic.CustomFilter            : doFilter 请求处理
+2020-03-25 16:54:56.482 DEBUG 21788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/my-tomcat/logs/access_log.2020-03-25.log", parameters={}
+2020-03-25 16:54:56.482 DEBUG 21788 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-03-25 16:54:56.483 DEBUG 21788 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2020-03-25 16:54:56.483 DEBUG 21788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2020-03-25 16:54:56.484 DEBUG 21788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2020-03-25 16:54:56.484 DEBUG 21788 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2020-03-25 16:54:56.490 DEBUG 21788 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2020-03-25 16:54:56.490 DEBUG 21788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2020-03-25 16:55:35.611  INFO 21788 --- [http-nio-8080-exec-3] com.hui.webbasic.CustomFilter            : doFilter 请求处理
+2020-03-25 16:55:35.611 DEBUG 21788 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/my-tomcat/logs", parameters={}
+2020-03-25 16:55:35.612 DEBUG 21788 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-03-25 16:55:35.614 DEBUG 21788 --- [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2020-03-25 16:55:35.615 DEBUG 21788 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2020-03-25 16:55:35.615 DEBUG 21788 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2020-03-25 16:55:35.616 DEBUG 21788 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2020-03-25 16:55:35.623 DEBUG 21788 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2020-03-25 16:55:35.623 DEBUG 21788 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2020-03-25 17:10:04.830  INFO 21788 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-25 17:10:05.195  INFO 21788 --- [SpringContextShutdownHook] com.hui.webbasic.CustomFilter            : filter 销毁
+2020-03-25 17:10:10.563  INFO 22152 --- [restartedMain] com.hui.webbasic.WebbasicApplication     : Starting WebbasicApplication on LAPTOP-93RGLFOL with PID 22152 (D:\javaCode\springBootDemo\webbasic\target\classes started by miaomiao in D:\javaCode\springBootDemo\webbasic)
+2020-03-25 17:10:10.566  INFO 22152 --- [restartedMain] com.hui.webbasic.WebbasicApplication     : No active profile set, falling back to default profiles: default
+2020-03-25 17:10:10.633  INFO 22152 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-25 17:10:10.633  INFO 22152 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-25 17:10:11.894  INFO 22152 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-25 17:10:11.903  INFO 22152 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-25 17:10:11.903  INFO 22152 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-25 17:10:11.983  INFO 22152 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-25 17:10:11.983 DEBUG 22152 --- [restartedMain] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-03-25 17:10:11.983  INFO 22152 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1350 ms
+2020-03-25 17:10:12.045  INFO 22152 --- [restartedMain] com.hui.webbasic.CustomFilter            : filter 初始化
+2020-03-25 17:10:12.206  INFO 22152 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-25 17:10:12.216 DEBUG 22152 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-03-25 17:10:12.269 DEBUG 22152 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2020-03-25 17:10:12.293 DEBUG 22152 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-03-25 17:10:12.300 DEBUG 22152 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-03-25 17:10:12.354  INFO 22152 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-25 17:10:12.392  INFO 22152 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-25 17:10:12.395  INFO 22152 --- [restartedMain] com.hui.webbasic.WebbasicApplication     : Started WebbasicApplication in 2.251 seconds (JVM running for 3.384)
+2020-03-25 17:10:12.397  INFO 22152 --- [restartedMain] com.hui.webbasic.WebbasicApplication     : 服务启动
+2020-03-25 17:10:24.431  INFO 22152 --- [http-nio-8080-exec-1] com.hui.webbasic.Customlister            : 监听器：初始化
+2020-03-25 17:10:24.435  INFO 22152 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-25 17:10:24.435  INFO 22152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-25 17:10:24.435 DEBUG 22152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-03-25 17:10:24.447 DEBUG 22152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-03-25 17:10:24.447  INFO 22152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-03-25 17:10:24.454  INFO 22152 --- [http-nio-8080-exec-1] com.hui.webbasic.CustomFilter            : doFilter 请求处理
+2020-03-25 17:10:24.456 DEBUG 22152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/hello", parameters={}
+2020-03-25 17:10:24.461 DEBUG 22152 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hui.webbasic.HelloController#hello()
+2020-03-25 17:10:24.480 DEBUG 22152 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-03-25 17:10:24.481 DEBUG 22152 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Hello World"]
+2020-03-25 17:10:24.486 DEBUG 22152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-03-25 17:10:24.488  INFO 22152 --- [http-nio-8080-exec-1] com.hui.webbasic.Customlister            : 监听器：销毁
+2020-03-25 17:11:02.581  INFO 22152 --- [http-nio-8080-exec-3] com.hui.webbasic.Customlister            : 监听器：初始化
+2020-03-25 17:11:02.582  INFO 22152 --- [http-nio-8080-exec-3] com.hui.webbasic.CustomFilter            : doFilter 请求处理
+2020-03-25 17:11:02.582 DEBUG 22152 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/hello", parameters={}
+2020-03-25 17:11:02.582 DEBUG 22152 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hui.webbasic.HelloController#hello()
+2020-03-25 17:11:02.583 DEBUG 22152 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-03-25 17:11:02.583 DEBUG 22152 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Hello World"]
+2020-03-25 17:11:02.584 DEBUG 22152 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-03-25 17:11:02.585  INFO 22152 --- [http-nio-8080-exec-3] com.hui.webbasic.Customlister            : 监听器：销毁
+2020-03-25 17:11:44.913  INFO 22152 --- [http-nio-8080-exec-5] com.hui.webbasic.Customlister            : 监听器：初始化
+2020-03-25 17:11:44.913  INFO 22152 --- [http-nio-8080-exec-5] com.hui.webbasic.CustomFilter            : doFilter 请求处理
+2020-03-25 17:11:44.913 DEBUG 22152 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/hello", parameters={}
+2020-03-25 17:11:44.914 DEBUG 22152 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hui.webbasic.HelloController#hello()
+2020-03-25 17:11:44.914 DEBUG 22152 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-03-25 17:11:44.915 DEBUG 22152 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Hello World"]
+2020-03-25 17:11:44.915 DEBUG 22152 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-03-25 17:11:44.916  INFO 22152 --- [http-nio-8080-exec-5] com.hui.webbasic.Customlister            : 监听器：销毁
+2020-03-25 17:23:54.241  INFO 22152 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-25 17:23:54.616  INFO 22152 --- [Thread-6] com.hui.webbasic.CustomFilter            : filter 销毁
+2020-03-25 17:23:54.696  INFO 22152 --- [restartedMain] com.hui.webbasic.WebbasicApplication     : Starting WebbasicApplication on LAPTOP-93RGLFOL with PID 22152 (D:\javaCode\springBootDemo\webbasic\target\classes started by miaomiao in D:\javaCode\springBootDemo\webbasic)
+2020-03-25 17:23:54.696  INFO 22152 --- [restartedMain] com.hui.webbasic.WebbasicApplication     : No active profile set, falling back to default profiles: default
+2020-03-25 17:23:54.948  INFO 22152 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-25 17:23:54.949  INFO 22152 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-25 17:23:54.949  INFO 22152 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-25 17:23:54.963  INFO 22152 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-25 17:23:54.963 DEBUG 22152 --- [restartedMain] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-03-25 17:23:54.963  INFO 22152 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 264 ms
+2020-03-25 17:23:54.981  INFO 22152 --- [restartedMain] com.hui.webbasic.CustomFilter            : filter 初始化
+2020-03-25 17:23:55.038  INFO 22152 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-25 17:23:55.041 DEBUG 22152 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-03-25 17:23:55.048 DEBUG 22152 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2020-03-25 17:23:55.056 DEBUG 22152 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-03-25 17:23:55.061 DEBUG 22152 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-03-25 17:23:55.076  INFO 22152 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-25 17:23:55.094  INFO 22152 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-25 17:23:55.094  INFO 22152 --- [restartedMain] com.hui.webbasic.WebbasicApplication     : Started WebbasicApplication in 0.428 seconds (JVM running for 826.084)
+2020-03-25 17:23:55.096  INFO 22152 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-25 17:23:55.097  INFO 22152 --- [restartedMain] com.hui.webbasic.WebbasicApplication     : 服务启动
+2020-03-25 17:24:28.319  INFO 22152 --- [http-nio-8080-exec-1] com.hui.webbasic.Customlister            : 监听器：初始化
+2020-03-25 17:24:28.320  INFO 22152 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-25 17:24:28.321  INFO 22152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-25 17:24:28.321 DEBUG 22152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-03-25 17:24:28.325 DEBUG 22152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-03-25 17:24:28.325  INFO 22152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-03-25 17:24:28.325  INFO 22152 --- [http-nio-8080-exec-1] com.hui.webbasic.CustomFilter            : doFilter 请求处理
+2020-03-25 17:24:28.326 DEBUG 22152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/hello", parameters={}
+2020-03-25 17:24:28.326 DEBUG 22152 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hui.webbasic.HelloController#hello()
+2020-03-25 17:24:28.326  INFO 22152 --- [http-nio-8080-exec-1] c.hui.webbasic.CustomHandlerInterceptor  : preHandle:请求前调用
+2020-03-25 17:24:28.329 DEBUG 22152 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2020-03-25 17:24:28.329 DEBUG 22152 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Hello World"]
+2020-03-25 17:24:28.330  INFO 22152 --- [http-nio-8080-exec-1] c.hui.webbasic.CustomHandlerInterceptor  : postHandle:请求后调用
+2020-03-25 17:24:28.330  INFO 22152 --- [http-nio-8080-exec-1] c.hui.webbasic.CustomHandlerInterceptor  : afterCompletion:请求调用完成后回调方法，即在视图渲染完成后回调
+2020-03-25 17:24:28.330 DEBUG 22152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-03-25 17:24:28.331  INFO 22152 --- [http-nio-8080-exec-1] com.hui.webbasic.Customlister            : 监听器：销毁
+2020-03-25 17:26:43.305  INFO 22152 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-25 17:26:43.630  INFO 22152 --- [SpringContextShutdownHook] com.hui.webbasic.CustomFilter            : filter 销毁
