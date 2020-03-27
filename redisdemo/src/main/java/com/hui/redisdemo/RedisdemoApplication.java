@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.Contact;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,27 +24,14 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-//@EnableRedisRepositories
+@MapperScan("com.hui.redisdemo.mapper")
 public class RedisdemoApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(RedisdemoApplication.class, args);
     }
     
-//    @Bean
-//    public RedisTemplate<String, String> redisTemplate(RedisConnectionFactory factory) {
-//        StringRedisTemplate template = new StringRedisTemplate(factory);
-//        Jackson2JsonRedisSerializer<Object> jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer<>(
-//                Object.class);
-//        ObjectMapper om = new ObjectMapper();
-//        om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
-//        om.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
-//        jackson2JsonRedisSerializer.setObjectMapper(om);
-//        //序列化 值时使用此序列化方法
-//        template.setValueSerializer(jackson2JsonRedisSerializer);
-//        template.afterPropertiesSet();
-//        return template;
-//    }
+
     
     //是否开启swagger，正式环境一般是需要关闭的，可根据springboot的多环境配置进行设置
     @Value(value = "${swagger.enabled}")
