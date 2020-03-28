@@ -6,6 +6,7 @@ import com.hui.redisbuss.mapper.RedRobRecordMapper;
 import com.hui.redisbuss.model.RedDetail;
 import com.hui.redisbuss.model.RedPacketDto;
 import com.hui.redisbuss.model.RedRecord;
+import com.hui.redisbuss.model.RedRobRecord;
 import com.hui.redisbuss.service.IRedService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,10 +60,22 @@ public class RedService implements IRedService {
     
     }
     
+    /**
+     * 成功抢到红包时，将当前用户账号信息及对应的红包金额等数据存入数据库表中
+     * @param userId 用户id
+     * @param redId  红包id
+     * @param amount 抢到的金额
+     * @throws Exception
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)
     @Async
     public void recordRobRedPacket(Integer userId, String redId, BigDecimal amount) throws Exception {
-    
+        RedRobRecord redRobRecord = new RedRobRecord();
+        redRobRecord.setUserId(userId);
+        redRobRecord.setAmount(amount);
+        redRobRecord.setRedPacket(redId);
+        redRobRecord.setCreateTime(new Date());
+        redRobRecordMapper.insert(redRobRecord);
     }
 }

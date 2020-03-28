@@ -7,10 +7,12 @@ import com.hui.redisbuss.tool.RedPacketUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @Service
 @Slf4j
@@ -50,6 +52,53 @@ public class RedPacketService implements IRedPacketService {
     
     @Override
     public BigDecimal rob(Integer userId, String redId) throws Exception {
+        ValueOperations valueOperations = redisTemplate.opsForValue();
+        // 如果已经抢过了，直接显示红包金额
+        Object obj = valueOperations.get(redId+userId+":rob");
+        if(obj != null) {
+            return new BigDecimal(obj.toString());
+        }
+        // 点击红包
+        Boolean res = click(redId);
+        if(res) {
+            // 随机获取一个红包
+            Object value = redisTemplate.opsForList().rightPop(redId);
+            if(value != null) {
+                // 红包的总个数 -1
+                String redTotalKey = redId +":total";
+                Integer currentTotal = valueOperations.get(redTotalKey) != null ?
+                        (Integer)valueOperations.get(redTotalKey):0;
+                valueOperations.set(redTotalKey, currentTotal-1);
+                
+                //分为单位
+                BigDecimal result = new BigDecimal(value.toString()).divide(new BigDecimal(100));
+                
+                //用户抢到的红包入库
+                redService.recordRobRedPacket(userId,redId,new BigDecimal(value.toString()));
+                
+                // 用户抢到的红包放入缓存
+                valueOperations.set(redId+userId+":rob",result,24L, TimeUnit.HOURS);
+                
+                log.info("当前用户已经抢到红包了:userId ={}, key={}, 金额={}",userId,redId,result);
+                
+                return result;
+            }
+        }
         return null;
+    }
+    
+    /**
+     * 点红包的业务处理逻辑
+     * @param redId 红包id
+     * @return -true 代表有红包 否则没有红包
+     */
+    private Boolean click(String redId) {
+        ValueOperations valueOperations = redisTemplate.opsForValue();
+        String redTotalKey = redId+":total";
+        Object total = valueOperations.get(redTotalKey);
+        if(total != null && Integer.valueOf(total.toString()) > 0) {
+            return true;
+        }
+        return false;
     }
 }

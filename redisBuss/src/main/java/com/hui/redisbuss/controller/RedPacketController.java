@@ -10,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.math.BigDecimal;
 
 @RestController
 @Slf4j
@@ -37,5 +37,23 @@ public class RedPacketController {
             baseResponse = new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
         }
         return baseResponse;
+    }
+    
+    @GetMapping(value = prefix+"/rob")
+    public BaseResponse rob(@RequestParam Integer userId, @RequestParam String redId) {
+        BaseResponse response = new BaseResponse(StatusCode.Success);
+    
+        try {
+            BigDecimal result = redPacketService.rob(userId,redId);
+            if (result != null) {
+                response.setData(result);
+            } else {
+                response = new BaseResponse(StatusCode.Fail.getCode(), "红包被抢完");
+            }
+        } catch (Exception e) {
+            log.info("抢红包发生了异常：userId={}, redId={}",userId,redId);
+            response = new BaseResponse(StatusCode.Fail.getCode(), e.getMessage());
+        }
+        return response;
     }
 }
