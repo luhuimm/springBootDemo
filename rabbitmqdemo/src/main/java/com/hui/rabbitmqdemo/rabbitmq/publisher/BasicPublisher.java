@@ -46,7 +46,9 @@ public class BasicPublisher {
                 // 指定路由key
                 rabbitTemplate.setRoutingKey(routeKeyName);
                 //将字符串转化为待发送的消息
-                Message msg = MessageBuilder.withBody(message.getBytes("utf-8")).build();
+                Message msg = MessageBuilder.withBody(message.getBytes("utf-8")).
+                        setDeliveryMode(MessageDeliveryMode.PERSISTENT)
+                        .build();
                 //转换并发送消息
                 rabbitTemplate.convertAndSend(msg);
                 log.info("基本消息模型-生产者-发送消息:{}",message);
