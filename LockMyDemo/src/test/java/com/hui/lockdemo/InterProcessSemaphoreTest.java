@@ -28,11 +28,8 @@ public class InterProcessSemaphoreTest {
     
     @Test
     public void SemaphoreTest() throws Exception {
-    
         FakeLimitedResource resource = new FakeLimitedResource();
-    
         InterProcessSemaphoreV2 semaphore = new InterProcessSemaphoreV2(client, PATH, MAX_LEASE);
-    
         Collection<Lease> leases = semaphore.acquire(5);
         System.out.println("get " + leases.size() + " leases");
         Lease lease = semaphore.acquire();

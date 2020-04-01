@@ -54,4 +54,20 @@ public class UserRegController {
         }
         return response;
     }
+    
+    @GetMapping(value = prefix+"/redissonLock/submit")
+    public BaseResponse regWithRedissonLock(String userName,String password)  {
+        
+        if(StringUtils.isEmpty(userName) || StringUtils.isEmpty(password)) {
+            return new BaseResponse(StatusCode.InvalidParams);
+        }
+        BaseResponse response = new BaseResponse(StatusCode.Success);
+        
+        try {
+            userRegService.userRegRedisson(userName,password);
+        } catch (Exception e) {
+            return new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+        }
+        return response;
+    }
 }
